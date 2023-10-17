@@ -5,6 +5,8 @@
       "name": "Harry Potter",
       "series": "Harry Potter",
       "occupation": "Wizard",
+      "mail": "harry.potter@example.com",
+      "phone": "123-456-7890",
       "created_at": "Le 1er Juillet 1997"
     },
     {
@@ -12,6 +14,8 @@
       "name": "Luke Skywalker",
       "series": "Star Wars",
       "occupation": "Jedi Knight",
+      "mail": "luke.skywalker@example.com",
+      "phone": "987-654-3210",
       "created_at": "Le 25 Mai 1977"
     },
     {
@@ -19,6 +23,8 @@
       "name": "Hermione Granger",
       "series": "Harry Potter",
       "occupation": "Witch",
+      "mail": "hermione.granger@example.com",
+      "phone": "555-123-4567",
       "created_at": "Le 1er Juillet 1997"
     },
     {
@@ -26,6 +32,8 @@
       "name": "Aragorn",
       "series": "The Lord of the Rings",
       "occupation": "Ranger",
+      "mail": "aragorn@example.com",
+      "phone": "333-555-7777",
       "created_at": "Le 29 Juillet 1954"
     },
     {
@@ -33,6 +41,8 @@
       "name": "Sherlock Holmes",
       "series": "Sherlock Holmes",
       "occupation": "Detective",
+      "mail": "sherlock.holmes@example.com",
+      "phone": "999-888-7777",
       "created_at": "Le 1er Mars 1887"
     },
     {
@@ -40,6 +50,8 @@
       "name": "Monkey D. Luffy",
       "series": "One Piece",
       "occupation": "Pirate",
+      "mail": "luffy@example.com",
+      "phone": "777-123-4567",
       "created_at": "Le 19 Juillet 1997"
     },
     {
@@ -47,6 +59,8 @@
       "name": "Jon Snow",
       "series": "Game of Thrones",
       "occupation": "Night's Watch",
+      "mail": "jon.snow@example.com",
+      "phone": "555-777-3333",
       "created_at": "Le 6 Août 1996"
     },
     {
@@ -54,6 +68,8 @@
       "name": "Arya Stark",
       "series": "Game of Thrones",
       "occupation": "Assassin",
+      "mail": "arya.stark@example.com",
+      "phone": "111-222-3333",
       "created_at": "Le 6 Août 1996"
     },
     {
@@ -61,6 +77,8 @@
       "name": "Gandalf",
       "series": "The Lord of the Rings",
       "occupation": "Wizard",
+      "mail": "gandalf@example.com",
+      "phone": "123-456-9999",
       "created_at": "Le 29 Juillet 1954"
     },
     {
@@ -68,6 +86,8 @@
       "name": "Katniss Everdeen",
       "series": "The Hunger Games",
       "occupation": "Huntress",
+      "mail": "katniss.everdeen@example.com",
+      "phone": "444-555-6666",
       "created_at": "Le 14 Septembre 2008"
     }
   ]
