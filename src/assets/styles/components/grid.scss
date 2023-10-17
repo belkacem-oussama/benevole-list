@@ -20,6 +20,11 @@ table {
     color: $header-color;
   }
 
+  td:nth-last-child(-n + 2) {
+    width: 200px;
+    text-align: center;
+  }
+
   .first-td {
     display: flex;
     align-items: center;
