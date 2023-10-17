@@ -22,7 +22,9 @@ export default function Grid() {
             <span className="first-td">
               <img src={img} alt="" />
               <ul>
-                <li>Oussama</li>
+                <li>
+                  <li>BELKACEM Oussama</li>
+                </li>
                 <li>oussama.blkc@gmail.com</li>
               </ul>
             </span>
