@@ -3,7 +3,9 @@ export default function Grid() {
     <div className="grid-container">
       <table>
         <tr>
-          <th>Select</th>
+          <th>
+            <input type="checkbox" name="" id="" />
+          </th>
           <th>Identité</th>
           <th>Phone</th>
           <th>Mail</th>
@@ -11,7 +13,9 @@ export default function Grid() {
           <th>Modifier</th>
         </tr>
         <tr>
-          <td>Select</td>
+          <td>
+            <input type="checkbox" name="" id="" />
+          </td>
           <td>Identité</td>
           <td>06.06.06.06.06</td>
           <td>John-Doe@unknown.com</td>
