@@ -1,0 +1,74 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Harry Potter",
+      "series": "Harry Potter",
+      "occupation": "Wizard",
+      "created_at": "Le 1er Juillet 1997"
+    },
+    {
+      "id": 2,
+      "name": "Luke Skywalker",
+      "series": "Star Wars",
+      "occupation": "Jedi Knight",
+      "created_at": "Le 25 Mai 1977"
+    },
+    {
+      "id": 3,
+      "name": "Hermione Granger",
+      "series": "Harry Potter",
+      "occupation": "Witch",
+      "created_at": "Le 1er Juillet 1997"
+    },
+    {
+      "id": 4,
+      "name": "Aragorn",
+      "series": "The Lord of the Rings",
+      "occupation": "Ranger",
+      "created_at": "Le 29 Juillet 1954"
+    },
+    {
+      "id": 5,
+      "name": "Sherlock Holmes",
+      "series": "Sherlock Holmes",
+      "occupation": "Detective",
+      "created_at": "Le 1er Mars 1887"
+    },
+    {
+      "id": 6,
+      "name": "Monkey D. Luffy",
+      "series": "One Piece",
+      "occupation": "Pirate",
+      "created_at": "Le 19 Juillet 1997"
+    },
+    {
+      "id": 7,
+      "name": "Jon Snow",
+      "series": "Game of Thrones",
+      "occupation": "Night's Watch",
+      "created_at": "Le 6 Août 1996"
+    },
+    {
+      "id": 8,
+      "name": "Arya Stark",
+      "series": "Game of Thrones",
+      "occupation": "Assassin",
+      "created_at": "Le 6 Août 1996"
+    },
+    {
+      "id": 9,
+      "name": "Gandalf",
+      "series": "The Lord of the Rings",
+      "occupation": "Wizard",
+      "created_at": "Le 29 Juillet 1954"
+    },
+    {
+      "id": 10,
+      "name": "Katniss Everdeen",
+      "series": "The Hunger Games",
+      "occupation": "Huntress",
+      "created_at": "Le 14 Septembre 2008"
+    }
+  ]
+}

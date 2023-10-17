@@ -40,4 +40,9 @@ table {
   li {
     color: $header-color;
   }
+
+  ul li span {
+    font-weight: lighter;
+    color: $header-color;
+  }
 }

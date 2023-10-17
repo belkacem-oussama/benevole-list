@@ -23,7 +23,9 @@ export default function Grid() {
               <img src={img} alt="" />
               <ul>
                 <li>
-                  <li>BELKACEM Oussama</li>
+                  <li>
+                    BELKACEM Oussama - <span>Fundraiser</span>
+                  </li>
                 </li>
                 <li>oussama.blkc@gmail.com</li>
               </ul>
