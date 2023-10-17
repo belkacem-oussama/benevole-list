@@ -4,13 +4,18 @@ table {
   width: 100%;
   border-radius: 10px;
 
+  tr:first-child {
+    height: 50px;
+  }
+
   th {
     background-color: $secondary-color;
     text-align: left;
     font-weight: inherit;
   }
 
-  tr:first-child {
-    height: 50px;
+  .first-td {
+    display: flex;
+    align-items: center;
   }
 }

@@ -1,3 +1,5 @@
+import img from "../assets/img/luffy.png"
+
 export default function Grid() {
   return (
     <div className="grid-container">
@@ -16,11 +18,23 @@ export default function Grid() {
           <td>
             <input type="checkbox" name="" id="" />
           </td>
-          <td>John Doe John-Doe@unknown.com</td>
+          <td>
+            <span className="first-td">
+              <img src={img} alt="" />
+              <ul>
+                <li>Oussama</li>
+                <li>oussama.blkc@gmail.com</li>
+              </ul>
+            </span>
+          </td>
           <td>06.06.06.06.06</td>
           <td>Le 28 Septembre 2023</td>
-          <td>Supprimer</td>
-          <td>Modifier</td>
+          <td>
+            <i className="ri-delete-bin-6-line"></i>
+          </td>
+          <td>
+            <i className="ri-pencil-line"></i>
+          </td>
         </tr>
       </table>
     </div>
