@@ -92,10 +92,10 @@
     },
     {
       "id": 10,
-      "name": "Katniss Everdeen",
+      "name": "Katness Everdeen",
       "series": "The Hunger Games",
       "occupation": "Huntress",
-      "mail": "katniss.everdeen@example.com",
+      "mail": "katness.everdeen@example.com",
       "phone": "444-555-6666",
       "created_at": "Le 14 Septembre 2008",
       "img": "katness_everdeen_img"

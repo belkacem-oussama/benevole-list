@@ -48,7 +48,7 @@ export default function Grid() {
               </td>
               <td>
                 <span className="first-td">
-                  <img src="" alt="" />
+                  <img src={infosIMG[user.img]} alt="" />
                   <ul>
                     <li>
                       {user.name} - <span>{user.occupation}</span>
