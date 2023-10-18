@@ -53,7 +53,7 @@ export default function Grid() {
       if (usersToDisplay.length + 5 >= users.characters.length) {
         setShowButton(false)
       }
-    }, 1000)
+    }, 2000)
   }
 
   const infosIMG = {
