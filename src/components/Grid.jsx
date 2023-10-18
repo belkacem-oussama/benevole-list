@@ -1,5 +1,8 @@
 import { useState } from "react"
 
+import Button from "./Button.jsx"
+import Loader from "./Loader.jsx"
+
 import monkey_d_luffy_img from "../assets/img/luffy.png"
 import luke_skywalker_img from "../assets/img/luke-skywalker.webp"
 import harry_potter_img from "../assets/img/harry-potter.jpeg"
@@ -12,12 +15,12 @@ import gandalf_img from "../assets/img/gandalf.webp"
 import katness_everdeen_img from "../assets/img/katness-everdeen.jpeg"
 
 import users from "../assets/json/user.json"
-import Button from "./Button.jsx"
 
 export default function Grid() {
   const [removedItems, setRemovedItems] = useState([])
   const [usersToShow, setUsersToShow] = useState(5)
   const [showButton, setShowButton] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleToggleRemove = (userId) => {
     if (removedItems.includes(userId)) {
@@ -130,6 +133,7 @@ export default function Grid() {
         </tbody>
       </table>
       {showButton && <Button onClick={handleShowMore} />}
+      <Loader color={"#32de84"} loading={isLoading} size={10} />
     </div>
   )
 }
