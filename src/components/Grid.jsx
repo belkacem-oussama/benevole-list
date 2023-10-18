@@ -12,6 +12,7 @@ import gandalf_img from "../assets/img/gandalf.webp"
 import katness_everdeen_img from "../assets/img/katness-everdeen.jpeg"
 
 import users from "../assets/json/user.json"
+import Button from "./Button.jsx"
 
 export default function Grid() {
   const [removedItems, setRemovedItems] = useState([])
@@ -128,7 +129,7 @@ export default function Grid() {
           ))}
         </tbody>
       </table>
-      {showButton && <button onClick={handleShowMore}>Load more</button>}
+      {showButton && <Button onClick={handleShowMore}>Load more</Button>}
     </div>
   )
 }
