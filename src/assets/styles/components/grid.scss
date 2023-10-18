@@ -18,7 +18,7 @@ table {
 
   td {
     color: $header-color;
-    border-bottom: solid $line-color 2px;
+    border-bottom: solid $secondary-color 2px;
   }
 
   td:nth-last-child(-n + 2) {
