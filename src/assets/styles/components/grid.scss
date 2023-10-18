@@ -10,6 +10,14 @@ table {
     background-color: $secondary-color;
   }
 
+  th:first-child {
+    border-top-left-radius: 20px;
+  }
+
+  th:last-child {
+    border-top-right-radius: 20px;
+  }
+
   th {
     background-color: $secondary-color;
     text-align: left;
