@@ -15,6 +15,7 @@ import gandalf_img from "../assets/img/gandalf.webp"
 import katness_everdeen_img from "../assets/img/katness-everdeen.jpeg"
 
 import users from "../assets/json/user.json"
+import { Link } from "react-router-dom"
 
 export default function Grid() {
   const [removedItems, setRemovedItems] = useState([])
@@ -128,16 +129,18 @@ export default function Grid() {
                 )}
               </td>
               <td>
-                {!isRemoved(user.id) && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="26"
-                    height="26"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M15.7279 9.57629L14.3137 8.16207L5 17.4758V18.89H6.41421L15.7279 9.57629ZM17.1421 8.16207L18.5563 6.74786L17.1421 5.33365L15.7279 6.74786L17.1421 8.16207ZM7.24264 20.89H3V16.6474L16.435 3.21233C16.8256 2.8218 17.4587 2.8218 17.8492 3.21233L20.6777 6.04075C21.0682 6.43128 21.0682 7.06444 20.6777 7.45497L7.24264 20.89Z"></path>
-                  </svg>
-                )}
+                <Link to="/edit">
+                  {!isRemoved(user.id) && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="26"
+                      height="26"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M15.7279 9.57629L14.3137 8.16207L5 17.4758V18.89H6.41421L15.7279 9.57629ZM17.1421 8.16207L18.5563 6.74786L17.1421 5.33365L15.7279 6.74786L17.1421 8.16207ZM7.24264 20.89H3V16.6474L16.435 3.21233C16.8256 2.8218 17.4587 2.8218 17.8492 3.21233L20.6777 6.04075C21.0682 6.43128 21.0682 7.06444 20.6777 7.45497L7.24264 20.89Z"></path>
+                    </svg>
+                  )}
+                </Link>
               </td>
             </tr>
           ))}
