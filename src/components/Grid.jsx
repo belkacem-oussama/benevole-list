@@ -129,7 +129,7 @@ export default function Grid() {
                 )}
               </td>
               <td>
-                <Link to="/edit">
+                <Link to={`/edit/${user.id}`}>
                   {!isRemoved(user.id) && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
