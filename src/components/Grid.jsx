@@ -129,7 +129,7 @@ export default function Grid() {
           ))}
         </tbody>
       </table>
-      {showButton && <Button onClick={handleShowMore}>Load more</Button>}
+      {showButton && <Button onClick={handleShowMore} />}
     </div>
   )
 }
