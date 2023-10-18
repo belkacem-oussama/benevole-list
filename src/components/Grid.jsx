@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
 import Button from "./Button.jsx"
 import Loader from "./Loader.jsx"
@@ -15,7 +16,6 @@ import gandalf_img from "../assets/img/gandalf.webp"
 import katness_everdeen_img from "../assets/img/katness-everdeen.jpeg"
 
 import users from "../assets/json/user.json"
-import { Link } from "react-router-dom"
 
 export default function Grid() {
   const [removedItems, setRemovedItems] = useState([])
