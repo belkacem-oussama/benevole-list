@@ -39,14 +39,21 @@ export default function Grid() {
   })
 
   const handleShowMore = () => {
-    if (usersToDisplay.length < users.characters.length) {
-      setShowButton(false)
-      setIsLoading(true)
-      setTimeout(() => {
-        setUsersToShow(usersToShow + 5)
+    setIsLoading(true)
+    setShowButton(false)
+
+    setTimeout(() => {
+      setUsersToShow(usersToShow + 5)
+
+      if (usersToDisplay.length <= users.characters.length) {
         setIsLoading(false)
-      }, 3000)
-    }
+        setShowButton(true)
+      }
+
+      if (usersToDisplay.length + 5 >= users.characters.length) {
+        setShowButton(false)
+      }
+    }, 1000)
   }
 
   const infosIMG = {
@@ -136,8 +143,12 @@ export default function Grid() {
           ))}
         </tbody>
       </table>
-      {showButton && <Button onClick={handleShowMore} />}
-      {isLoading && <Loader color={"#32de84"} loading={isLoading} size={10} />}
+      {showButton ? (
+        <Button onClick={handleShowMore} />
+      ) : isLoading ? (
+        <Loader color={"#32de84"} loading={isLoading} size={10} />
+      ) : null}
+      {!showButton && !isLoading && <p>...fin de transmission</p>}
     </div>
   )
 }

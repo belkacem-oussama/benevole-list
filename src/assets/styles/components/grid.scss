@@ -58,7 +58,12 @@ table {
     text-decoration: line-through;
 
     img {
-      display: none;
+      opacity: 10%;
     }
   }
+}
+
+p {
+  color: $header-color;
+  text-align: center;
 }
