@@ -40,9 +40,13 @@ export default function Grid() {
 
   const handleShowMore = () => {
     if (usersToDisplay.length < users.characters.length) {
-      setUsersToShow(usersToShow + 5)
+      setShowButton(false)
+      setIsLoading(true)
+      setTimeout(() => {
+        setUsersToShow(usersToShow + 5)
+        setIsLoading(false)
+      }, 3000)
     }
-    setShowButton(false)
   }
 
   const infosIMG = {
@@ -133,7 +137,7 @@ export default function Grid() {
         </tbody>
       </table>
       {showButton && <Button onClick={handleShowMore} />}
-      <Loader color={"#32de84"} loading={isLoading} size={10} />
+      {isLoading && <Loader color={"#32de84"} loading={isLoading} size={10} />}
     </div>
   )
 }
