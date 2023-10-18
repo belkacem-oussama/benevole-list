@@ -15,6 +15,8 @@ import users from "../assets/json/user.json"
 
 export default function Grid() {
   const [removedItems, setRemovedItems] = useState([])
+  const [usersToShow, setUsersToShow] = useState(5)
+  const [showButton, setShowButton] = useState(true)
 
   const handleToggleRemove = (userId) => {
     if (removedItems.includes(userId)) {
@@ -27,6 +29,17 @@ export default function Grid() {
   }
 
   const isRemoved = (userId) => removedItems.includes(userId)
+
+  const usersToDisplay = users.characters.filter((element, index) => {
+    return index < usersToShow
+  })
+
+  const handleShowMore = () => {
+    if (usersToDisplay.length < users.characters.length) {
+      setUsersToShow(usersToShow + 5)
+    }
+    setShowButton(false)
+  }
 
   const infosIMG = {
     monkey_d_luffy_img: monkey_d_luffy_img,
@@ -57,7 +70,7 @@ export default function Grid() {
           </tr>
         </thead>
         <tbody>
-          {users.characters.map((user) => (
+          {usersToDisplay.map((user) => (
             <tr
               key={user.id}
               className={isRemoved(user.id) ? "removed_item" : ""}
@@ -115,6 +128,7 @@ export default function Grid() {
           ))}
         </tbody>
       </table>
+      {showButton && <button onClick={handleShowMore}>Load more</button>}
     </div>
   )
 }
