@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useEffect, useState } from "react"
 
 import Button from "./Button.jsx"
 import Loader from "./Loader.jsx"
@@ -17,11 +16,12 @@ import katness_everdeen_img from "../assets/img/katness-everdeen.jpeg"
 
 import users from "../assets/json/user.json"
 
-export default function Grid() {
+export default function Grid({ displayPopUp, setDisplayPopUp }) {
   const [removedItems, setRemovedItems] = useState([])
   const [usersToShow, setUsersToShow] = useState(5)
   const [showButton, setShowButton] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
+  const [selectedUserInfo, setSelectedUserInfo] = useState([])
 
   const handleToggleRemove = (userId) => {
     if (removedItems.includes(userId)) {
@@ -35,9 +35,7 @@ export default function Grid() {
 
   const isRemoved = (userId) => removedItems.includes(userId)
 
-  const usersToDisplay = users.characters.filter((element, index) => {
-    return index < usersToShow
-  })
+  const usersToDisplay = users.characters.slice(0, usersToShow)
 
   const handleShowMore = () => {
     setIsLoading(true)
@@ -68,6 +66,10 @@ export default function Grid() {
     arya_stark_img: arya_stark_img,
     gandalf_img: gandalf_img,
     katness_everdeen_img: katness_everdeen_img,
+  }
+
+  const handleUsersClicked = () => {
+    setDisplayPopUp(true)
   }
 
   return (
@@ -129,18 +131,17 @@ export default function Grid() {
                 )}
               </td>
               <td>
-                <Link to={`/edit/${user.id}`}>
-                  {!isRemoved(user.id) && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="26"
-                      height="26"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M15.7279 9.57629L14.3137 8.16207L5 17.4758V18.89H6.41421L15.7279 9.57629ZM17.1421 8.16207L18.5563 6.74786L17.1421 5.33365L15.7279 6.74786L17.1421 8.16207ZM7.24264 20.89H3V16.6474L16.435 3.21233C16.8256 2.8218 17.4587 2.8218 17.8492 3.21233L20.6777 6.04075C21.0682 6.43128 21.0682 7.06444 20.6777 7.45497L7.24264 20.89Z"></path>
-                    </svg>
-                  )}
-                </Link>
+                {!isRemoved(user.id) && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="26"
+                    height="26"
+                    viewBox="0 0 24 24"
+                    onClick={handleUsersClicked}
+                  >
+                    <path d="M15.7279 9.57629L14.3137 8.16207L5 17.4758V18.89H6.41421L15.7279 9.57629ZM17.1421 8.16207L18.5563 6.74786L17.1421 5.33365L15.7279 6.74786L17.1421 8.16207ZM7.24264 20.89H3V16.6474L16.435 3.21233C16.8256 2.8218 17.4587 2.8218 17.8492 3.21233L20.6777 6.04075C21.0682 6.43128 21.0682 7.06444 20.6777 7.45497L7.24264 20.89Z"></path>
+                  </svg>
+                )}
               </td>
             </tr>
           ))}
