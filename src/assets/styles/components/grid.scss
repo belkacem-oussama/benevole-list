@@ -1,77 +1,79 @@
-table {
-  border-collapse: collapse;
-  width: 100%;
+.grid-container {
+  table {
+    border-collapse: collapse;
+    width: 100%;
 
-  tr:first-child {
-    height: 50px;
-  }
+    tr:first-child {
+      height: 50px;
+    }
 
-  tr:hover {
-    background-color: $secondary-color;
-  }
+    tr:hover {
+      background-color: $secondary-color;
+    }
 
-  th:first-child {
-    border-top-left-radius: 20px;
-  }
+    th:first-child {
+      border-top-left-radius: 20px;
+    }
 
-  th:last-child {
-    border-top-right-radius: 20px;
-  }
+    th:last-child {
+      border-top-right-radius: 20px;
+    }
 
-  th {
-    background-color: $secondary-color;
-    text-align: left;
-    font-weight: inherit;
-    color: $header-color;
-    font-weight: bold;
-  }
+    th {
+      background-color: $secondary-color;
+      text-align: left;
+      font-weight: inherit;
+      color: $header-color;
+      font-weight: bold;
+    }
 
-  td {
-    color: $header-color;
-    border-bottom: solid $secondary-color 2px;
-  }
+    td {
+      color: $header-color;
+      border-bottom: solid $secondary-color 2px;
+    }
 
-  td:nth-last-child(-n + 2) {
-    text-align: center;
-    width: 100px;
-  }
+    td:nth-last-child(-n + 2) {
+      text-align: center;
+      width: 100px;
+    }
 
-  .first-td {
-    display: flex;
-    align-items: center;
-  }
+    .first-td {
+      display: flex;
+      align-items: center;
+    }
 
-  li:first-child {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: black;
-  }
+    li:first-child {
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: black;
+    }
 
-  li {
-    color: $header-color;
-  }
+    li {
+      color: $header-color;
+    }
 
-  ul li span {
-    font-weight: lighter;
-    color: $header-color;
-  }
+    ul li span {
+      font-weight: lighter;
+      color: $header-color;
+    }
 
-  input {
-    width: 20px;
-    height: 20px;
-  }
+    input {
+      width: 20px;
+      height: 20px;
+    }
 
-  .removed_item {
-    text-decoration: line-through;
+    .removed_item {
+      text-decoration: line-through;
 
-    img {
-      opacity: 10%;
+      img {
+        opacity: 10%;
+      }
     }
   }
-}
 
-p {
-  color: $header-color;
-  text-align: center;
+  p {
+    color: $header-color;
+    text-align: center;
+  }
 }
