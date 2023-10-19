@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useParams } from "react-router-dom"
-
+import Input from "../components/Input.jsx"
 import users from "../assets/json/user.json"
 
 export default function Edit() {
@@ -53,22 +53,38 @@ export default function Edit() {
         <h1>Edit</h1>
         <span className="edit-item" key="1">
           <h3>Identité :</h3>
-          <p>{element.name}</p>
+          {iconsState.find((icon) => icon.key === "1")?.isSaving ? (
+            <Input />
+          ) : (
+            <p>{element.name}</p>
+          )}
           {renderSaveIcon("1")}
         </span>
         <span className="edit-item" key="2">
           <h3>Job :</h3>
-          <p>{element.occupation}</p>
+          {iconsState.find((icon) => icon.key === "2")?.isSaving ? (
+            <Input />
+          ) : (
+            <p>{element.occupation}</p>
+          )}
           {renderSaveIcon("2")}
         </span>
         <span className="edit-item" key="3">
           <h3>Adresse mail :</h3>
-          <p>{element.mail}</p>
+          {iconsState.find((icon) => icon.key === "3")?.isSaving ? (
+            <Input />
+          ) : (
+            <p>{element.mail}</p>
+          )}
           {renderSaveIcon("3")}
         </span>
         <span className="edit-item" key="4">
           <h3>Numéro de téléphone :</h3>
-          <p>{element.phone}</p>
+          {iconsState.find((icon) => icon.key === "4")?.isSaving ? (
+            <Input />
+          ) : (
+            <p>{element.phone}</p>
+          )}
           {renderSaveIcon("4")}
         </span>
       </div>

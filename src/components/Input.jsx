@@ -1,7 +1,13 @@
-export default function Input() {
+export default function Input({ onClick, placeholder, value, name }) {
   return (
-    <div className="component-input">
-      <input type="text" />
-    </div>
+    <>
+      <input
+        type="text"
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onClick={onClick}
+      />
+    </>
   )
 }
