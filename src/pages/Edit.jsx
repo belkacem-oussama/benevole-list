@@ -16,6 +16,13 @@ export default function Edit() {
     { key: "4", isSaving: false },
   ])
 
+  const [inputValue, setInputValue] = useState([
+    { key: "1", value: element.name },
+    { key: "2", value: element.occupation },
+    { key: "3", value: element.mail },
+    { key: "4", value: element.phone },
+  ])
+
   const handleOnSave = (key) => {
     setIconsState((prevState) =>
       prevState.map((icon) =>
@@ -54,7 +61,21 @@ export default function Edit() {
         <span className="edit-item" key="1">
           <h3>Identité :</h3>
           {iconsState.find((icon) => icon.key === "1")?.isSaving ? (
-            <Input value={element.name} />
+            <Input
+              value={inputValue.find((item) => item.key === "1").value}
+              onChange={(e) => {
+                const newValue = e.target.value
+                setInputValue((prevInputValue) => {
+                  const updatedInputValue = prevInputValue.map((item) => {
+                    if (item.key === "1") {
+                      return { ...item, value: newValue }
+                    }
+                    return item
+                  })
+                  return updatedInputValue
+                })
+              }}
+            />
           ) : (
             <p>{element.name}</p>
           )}
@@ -63,7 +84,21 @@ export default function Edit() {
         <span className="edit-item" key="2">
           <h3>Job :</h3>
           {iconsState.find((icon) => icon.key === "2")?.isSaving ? (
-            <Input value={element.occupation} />
+            <Input
+              value={inputValue.find((item) => item.key === "2").value}
+              onChange={(e) => {
+                const newValue = e.target.value
+                setInputValue((prevInputValue) => {
+                  const updatedInputValue = prevInputValue.map((item) => {
+                    if (item.key === "2") {
+                      return { ...item, value: newValue }
+                    }
+                    return item
+                  })
+                  return updatedInputValue
+                })
+              }}
+            />
           ) : (
             <p>{element.occupation}</p>
           )}
@@ -72,7 +107,21 @@ export default function Edit() {
         <span className="edit-item" key="3">
           <h3>Adresse mail :</h3>
           {iconsState.find((icon) => icon.key === "3")?.isSaving ? (
-            <Input value={element.mail} />
+            <Input
+              value={inputValue.find((item) => item.key === "3").value}
+              onChange={(e) => {
+                const newValue = e.target.value
+                setInputValue((prevInputValue) => {
+                  const updatedInputValue = prevInputValue.map((item) => {
+                    if (item.key === "3") {
+                      return { ...item, value: newValue }
+                    }
+                    return item
+                  })
+                  return updatedInputValue
+                })
+              }}
+            />
           ) : (
             <p>{element.mail}</p>
           )}
@@ -81,7 +130,21 @@ export default function Edit() {
         <span className="edit-item" key="4">
           <h3>Numéro de téléphone :</h3>
           {iconsState.find((icon) => icon.key === "4")?.isSaving ? (
-            <Input value={element.phone} />
+            <Input
+              value={inputValue.find((item) => item.key === "4").value}
+              onChange={(e) => {
+                const newValue = e.target.value
+                setInputValue((prevInputValue) => {
+                  const updatedInputValue = prevInputValue.map((item) => {
+                    if (item.key === "4") {
+                      return { ...item, value: newValue }
+                    }
+                    return item
+                  })
+                  return updatedInputValue
+                })
+              }}
+            />
           ) : (
             <p>{element.phone}</p>
           )}
