@@ -1,3 +1,11 @@
 input {
-  border: solid red;
+  border: solid $secondary-color;
+  width: 200px;
+  padding: 4px;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border: solid $header-color 1px;
+  }
 }

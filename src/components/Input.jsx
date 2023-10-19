@@ -1,4 +1,4 @@
-export default function Input({ onClick, placeholder, value, name }) {
+export default function Input({ onClick, onChange, placeholder, value, name }) {
   return (
     <>
       <input
@@ -7,6 +7,7 @@ export default function Input({ onClick, placeholder, value, name }) {
         placeholder={placeholder}
         value={value}
         onClick={onClick}
+        onChange={onChange}
       />
     </>
   )
