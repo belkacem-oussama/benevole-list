@@ -54,7 +54,7 @@ export default function Edit() {
         <span className="edit-item" key="1">
           <h3>Identité :</h3>
           {iconsState.find((icon) => icon.key === "1")?.isSaving ? (
-            <Input />
+            <Input value={element.name} />
           ) : (
             <p>{element.name}</p>
           )}
@@ -63,7 +63,7 @@ export default function Edit() {
         <span className="edit-item" key="2">
           <h3>Job :</h3>
           {iconsState.find((icon) => icon.key === "2")?.isSaving ? (
-            <Input />
+            <Input value={element.occupation} />
           ) : (
             <p>{element.occupation}</p>
           )}
@@ -72,7 +72,7 @@ export default function Edit() {
         <span className="edit-item" key="3">
           <h3>Adresse mail :</h3>
           {iconsState.find((icon) => icon.key === "3")?.isSaving ? (
-            <Input />
+            <Input value={element.mail} />
           ) : (
             <p>{element.mail}</p>
           )}
@@ -81,7 +81,7 @@ export default function Edit() {
         <span className="edit-item" key="4">
           <h3>Numéro de téléphone :</h3>
           {iconsState.find((icon) => icon.key === "4")?.isSaving ? (
-            <Input />
+            <Input value={element.phone} />
           ) : (
             <p>{element.phone}</p>
           )}
